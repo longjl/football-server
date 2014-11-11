@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>今日订餐</title>
     <meta name="description"
-          content="订餐"/>
+          content="football app"/>
     <meta name="keywords" content="Sticky Table Headers Revisited"/>
     <meta name="author" content="Codrops"/>
     <link rel="stylesheet" type="text/css" href="/css/normalize.css"/>
@@ -20,56 +20,16 @@
     </div>
     <header>
         <nav class="codrops-demos">
-            <a href="/" title="Basic Usage">今日</a>
-            <a class="current-demo" href="/users" title="Biaxial Headers">订餐名单</a>
-            <a class="current-demo" href="/add.html" title="Biaxial Headers">添加</a>
+            <!--<a href="/" title="Basic Usage">今日</a>-->
         </nav>
     </header>
     <div class="component">
-        <h2>今日 - ${today} <a href="/exportExcel"  style="margin-left:50px">导出</a></h2>
-        <table>
-            <thead>
-            <tr>
-                <th>名字</th>
-                <th>邮箱</th>
-                <th>手机</th>
-                <th>时间</th>
-                <th>处理</th>
-            </tr>
-            </thead>
-            <tbody>
-            <#if orderses??>
-                <#list orderses as o>
-                    <tr>
-                        <td class="user-name">${o.nickname}</td>
-                        <td class="user-email">${o.email}</td>
-                        <td class="user-mobile">${o.mobile}</td>
-                        <td class="user-mobile">${o.create_at}</td>
-                        <td class="user-mobile"><a href="/delOrders/${o.id}">取消订餐</a></td>
-                    </tr>
-                </#list>
-            </#if>
-            </tbody>
-        </table>
+          football api
     </div>
     <section class="related">
         <!--<div><a href="http://www.leap.cn" target="_blank"><h4>力扑视频</h4></a></div>-->
     </section>
 </div>
-<!-- /container -->
-<script src="/js/jquery.min.js"></script>
-<script src="/js/jquery.ba-throttle-debounce.min.js"></script>
-<script src="/js/jquery.stickyheader.js"></script>
-<script type="text/javascript">
-    function exportExcel(){
-        $.ajax({
-            url: "/exportExcel",
-            context: document.body
-                }).done(function() {
-                    alert('hello');
-                    // $( this ).addClass( "done" );
-                });
-    }
-</script>
+
 </body>
 </html>
